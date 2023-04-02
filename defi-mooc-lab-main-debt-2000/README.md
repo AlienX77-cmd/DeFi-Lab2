@@ -1,4 +1,5 @@
 # กิตติภัค วิบูลเสถียร 6310505688 ปฏิบัติการนอกห้องเรียน 2 (219496/418496 วิชา CeFi vs DeFi)
+## 2.1) กรณีใช้หนี้เพียง 2,000 USDT
 
 # Hands-on Exercise: Flash Loan based Liquidation
 
