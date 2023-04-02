@@ -288,9 +288,9 @@ contract LiquidationOperator is IUniswapV2Callee {
         
         //2.3 Swap WBTC for WETH
         console.log("After_Repayment_WBTC: ", WBTC.balanceOf(address(this))); //หลังจากนำ WBTC บางส่วนไปคืนแล้ว เราจะเหลือ WBTC ใน balance เท่าไร
-        uint256 Swap_WBTC_to_ETH = WBTC.balanceOf(address(this));
-        WBTC.transfer(address(uniswapV2Pair_WBTC_WETH), Swap_WBTC_to_ETH);
-        uint256 amountOut_WETH = getAmountOut(Swap_WBTC_to_ETH, reserve_WBTC_Pool2, reserve_WETH_Pool2);
+        uint256 swap_WBTC_to_ETH = WBTC.balanceOf(address(this));
+        WBTC.transfer(address(uniswapV2Pair_WBTC_WETH), swap_WBTC_to_ETH);
+        uint256 amountOut_WETH = getAmountOut(swap_WBTC_to_ETH, reserve_WBTC_Pool2, reserve_WETH_Pool2);
         uniswapV2Pair_WBTC_WETH.swap(0, amountOut_WETH, address(this), "");
         console.log("After_Swap_WETH: ", WETH.balanceOf(address(this)));
 
